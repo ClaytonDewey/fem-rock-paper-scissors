@@ -12,7 +12,8 @@ const Gameboard = () => {
 
   return (
     <>
-      <div className={`gameboard  ${playerChoice ? 'gameboard-played' : ''}`}>
+      <section
+        className={`gameboard  ${playerChoice ? 'gameboard-played' : ''}`}>
         {!playerChoice ? (
           <>
             {choices.map((choice) => (
@@ -25,7 +26,7 @@ const Gameboard = () => {
                 <div className='sr-only'>{choice}</div>
               </Button>
             ))}
-            <div className='background'>
+            <div className='background' aria-hidden='true'>
               <Icon name='triangle' />
             </div>
           </>
@@ -34,7 +35,7 @@ const Gameboard = () => {
             <Results />
           </>
         )}
-      </div>
+      </section>
     </>
   );
 };

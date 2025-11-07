@@ -39,12 +39,12 @@ const Results = () => {
           </p>
         </div>
         {resultText && (
-          <div className='results'>
+          <section className='results'>
             <h2>{resultText}</h2>
             <button className='btn btn-next' onClick={playAgain}>
               Play Again
             </button>
-          </div>
+          </section>
         )}
       </>
     </>

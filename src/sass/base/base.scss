@@ -1,0 +1,54 @@
+@use '../util' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-style: normal;
+  font-weight: normal;
+}
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: rem(16);
+  font-weight: 600;
+  min-height: 100vh;
+  background: var(--rdl-gradient);
+  color: var(--clr-white);
+  padding: rem(32);
+
+  @include breakpoint(medium) {
+    padding: rem(48) rem(32) rem(32);
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: rem(1);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: rem(1);
+}
+
+svg {
+  fill: currentColor;
+}

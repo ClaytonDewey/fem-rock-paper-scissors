@@ -1,0 +1,38 @@
+@use '../util' as *;
+
+.scorecard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #f3f3f3 0%, #ffffff 100%);
+  color: var(--clr-blue-700);
+  height: rem(72);
+  width: rem(80);
+  margin: 0;
+  padding: 0;
+  letter-spacing: rem(1.56);
+  font-size: rem(10);
+  line-height: 1;
+  border-radius: rem(4);
+  text-transform: uppercase;
+
+  span {
+    color: var(--clr-gray-600);
+    font-size: rem(40);
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  @include breakpoint(medium) {
+    height: rem(114);
+    width: rem(150);
+    padding-block: rem(16);
+    font-size: rem(14);
+    border-radius: rem(8);
+
+    span {
+      font-size: rem(70);
+    }
+  }
+}

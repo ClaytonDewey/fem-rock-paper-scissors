@@ -1,0 +1,120 @@
+@use '../util' as *;
+
+.gameboard {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin: rem(105) auto 0;
+  height: rem(282);
+  width: rem(312);
+
+  &-played {
+    height: auto;
+  }
+
+  .background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      height: rem(190);
+      width: rem(210);
+    }
+  }
+
+  > *:nth-child(3) {
+    margin-inline: auto;
+  }
+
+  @include breakpoint(medium) {
+    height: rem(430);
+    width: rem(476);
+    margin-block-start: rem(64);
+
+    .background svg {
+      height: rem(290);
+      width: rem(320);
+    }
+
+    &-played {
+      justify-content: center;
+      align-items: center;
+      gap: rem(72);
+      width: 100%;
+
+      .choice:first-child {
+        order: 0;
+      }
+
+      .choice:nth-child(2) {
+        order: 2;
+      }
+
+      > *:last-child {
+        order: 1;
+        margin: 0 !important;
+      }
+    }
+  }
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: rem(16);
+  text-transform: uppercase;
+  font-size: rem(15);
+  font-weight: 700;
+  line-height: rem(32);
+  letter-spacing: rem(1.88);
+
+  @include breakpoint(medium) {
+    font-size: rem(24);
+    gap: rem(63);
+
+    .btn.btn-circle {
+      --btn-border-width: #{rem(35)};
+      --btn-shadow-offset: #{rem(12)};
+      order: 1;
+      height: rem(287);
+      width: rem(293);
+
+      &.paper {
+        svg {
+          height: rem(119);
+          width: rem(99);
+        }
+      }
+
+      &.scissors {
+        svg {
+          height: rem(116);
+          width: rem(103);
+        }
+      }
+
+      &.rock {
+        svg {
+          height: rem(96);
+          width: rem(95);
+        }
+      }
+    }
+
+    p {
+      order: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+export { default as IconClose } from './Close';
+export { default as Icon } from './icon';
+export { default as IconLizard } from './Lizard';
+export { default as IconLogoBonus } from './LogoBonus';
+export { default as IconLogo } from './Logo';
+export { default as IconPaper } from './Paper';
+export { default as IconPentagon } from './Pentagon';
+export { default as IconRestart } from './Restart';
+export { default as IconRock } from './Rock';
+export { default as IconRulesBonus } from './RulesBonus';
+export { default as IconRules } from './Rules';
+export { default as IconScissors } from './Scissors';
+export { default as IconSpock } from './Spock';
+export { default as IconTriangle } from './Triangle';

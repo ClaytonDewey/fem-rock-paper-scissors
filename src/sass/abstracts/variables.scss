@@ -1,0 +1,36 @@
+@use '../util' as *;
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gold-500: hsl(39, 89%, 49%);
+  --clr-gold-600: hsl(28, 76%, 44%);
+  --clr-blue-500: hsl(230, 89%, 62%);
+  --clr-blue-700: hsl(229, 64%, 46%); // (score text)
+  --clr-red-600: hsl(349, 71%, 52%);
+  --clr-red-800: hsl(347, 75%, 35%);
+  --clr-purple-600: hsl(261, 73%, 60%);
+  --clr-purple-700: hsl(261, 51%, 44%);
+  --clr-lt-blue-400: hsl(189, 59%, 53%);
+  --clr-lt-blue-500: hsl(194, 58%, 42%);
+
+  // ### Neutral
+  --clr-navy-900: hsl(229, 25%, 31%); // (dark text)
+  --clr-gray-600: hsl(246, 11%, 37%); // (header outline)
+
+  // ### Background
+  --clr-gradient-start: hsl(214, 47%, 23%);
+  --clr-gradient-end: hsl(237, 48%, 15%);
+  --rdl-gradient: radial-gradient(
+    circle,
+    var(--clr-gradient-start) 0%,
+    var(--clr-gradient-end) 100%
+  );
+  --btn-gradient: linear-gradient(to bottom, #f3f3f3 0%, #dadada 100%);
+
+  // ### Button
+  --btn-border-width: #{rem(15)};
+  --btn-shadow-offset: #{rem(5)};
+
+  // ### Transition
+  --transition: all 0.3s ease-in-out;
+}

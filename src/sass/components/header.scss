@@ -1,0 +1,32 @@
+@use '../util' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-inline: auto;
+  max-width: rem(700);
+  height: rem(96);
+  padding: rem(12);
+  border: rem(1) solid rgba(255, 255, 255, 0.5);
+  border-radius: rem(5);
+
+  svg {
+    height: rem(48);
+    width: rem(83);
+    margin-inline-start: rem(11);
+  }
+
+  @include breakpoint(medium) {
+    height: rem(150);
+    padding: rem(18) rem(24);
+    border-radius: rem(15);
+
+    svg {
+      height: rem(96);
+      width: rem(159);
+      margin-inline-start: rem(8);
+    }
+  }
+}

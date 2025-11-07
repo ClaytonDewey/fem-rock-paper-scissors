@@ -1,0 +1,79 @@
+@use '../util' as *;
+
+.modal {
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(113);
+    background-color: white;
+    padding: rem(95) rem(20);
+    border-radius: rem(8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      color: var(--clr-gray-600);
+      font-size: rem(32);
+      text-transform: uppercase;
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(154);
+  }
+
+  @include breakpoint(medium) {
+    &-content {
+      padding: rem(32);
+      width: rem(400);
+      height: rem(415);
+      gap: rem(48);
+    }
+
+    &-header {
+      justify-content: space-between;
+    }
+
+    &-body {
+      .btn {
+        display: none;
+      }
+    }
+  }
+}
+
+.btn.btn-modal-close {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: flex;
+    background: none;
+    border: none;
+    font-size: rem(24);
+    cursor: pointer;
+  }
+}

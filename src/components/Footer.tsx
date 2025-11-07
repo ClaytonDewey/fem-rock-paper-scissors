@@ -49,7 +49,10 @@ const Footer = () => {
         <div className='sr-only'>
           Scissors beats Paper - Paper beats Rock - Rock beats Scissors.
         </div>
-        <button className='btn' onClick={closeModal} aria-label='Close'>
+        <button
+          className='btn btn-close'
+          onClick={closeModal}
+          aria-label='Close'>
           <Icon name='close' />
         </button>
       </Modal>

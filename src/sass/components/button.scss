@@ -14,10 +14,15 @@
   line-height: 1;
   transition: var(--transition);
 
+  &-close {
+    svg {
+      fill: var(--clr-gray-600);
+    }
+  }
+
   &-circle {
-    --btn-border-width: #{rem(10)};
-    height: rem(93);
-    width: rem(96);
+    height: rem(127);
+    width: rem(130);
     border-radius: 50%;
     background: var(--btn-gradient);
     border: var(--btn-border-width) solid;

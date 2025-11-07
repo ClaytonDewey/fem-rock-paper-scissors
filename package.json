@@ -2,6 +2,7 @@
   "name": "fem-rock-paper-scissors",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://claytondewey.github.io/fem-rock-paper-scissors/",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",

@@ -17,7 +17,8 @@
   &-content {
     display: flex;
     flex-direction: column;
-    gap: rem(113);
+    justify-content: center;
+    gap: rem(50);
     background-color: white;
     padding: rem(95) rem(20);
     border-radius: rem(8);
@@ -43,7 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: rem(154);
+    gap: rem(50);
   }
 
   @include breakpoint(medium) {

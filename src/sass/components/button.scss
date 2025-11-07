@@ -15,8 +15,9 @@
   transition: var(--transition);
 
   &-circle {
-    height: rem(127);
-    width: rem(129);
+    --btn-border-width: #{rem(10)};
+    height: rem(93);
+    width: rem(96);
     border-radius: 50%;
     background: var(--btn-gradient);
     border: var(--btn-border-width) solid;
@@ -204,8 +205,9 @@
   }
 
   &-next {
-    height: rem(48);
-    width: rem(220);
+    height: rem(40);
+    width: rem(200);
+    font-size: rem(14);
   }
 
   &-container {
@@ -213,7 +215,11 @@
     align-items: center;
     justify-content: center;
     gap: rem(32);
-    margin-block-end: rem(16);
+    margin-block-end: rem(5);
+
+    @include breakpoint(medium) {
+      margin-block-end: rem(16);
+    }
   }
 
   &-rules {

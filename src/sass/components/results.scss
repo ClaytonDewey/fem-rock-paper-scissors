@@ -6,16 +6,21 @@
   align-items: center;
   justify-content: center;
   gap: rem(16);
-  height: rem(131);
-  margin-block-start: rem(62);
+  height: auto;
+  margin-block-start: rem(16);
 
   h2 {
-    font-size: rem(56);
+    font-size: rem(41);
     font-weight: 700;
     text-transform: uppercase;
   }
 
   @include breakpoint(medium) {
+    height: rem(131);
+    margin-block-start: rem(62);
+    h2 {
+      font-size: rem(56);
+    }
     margin: 0;
   }
 }

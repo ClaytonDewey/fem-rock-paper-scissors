@@ -6,9 +6,10 @@
   left: 0;
   right: 0;
   width: 100%;
-  margin-block-end: rem(32);
+  margin-block-end: rem(16);
 
   @include breakpoint(medium) {
+    margin-block-end: rem(32);
     padding-inline: rem(32);
   }
 }
